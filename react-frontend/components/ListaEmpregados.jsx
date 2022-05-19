@@ -14,6 +14,7 @@ const ListaEmpregados = () => {
             setCarregando(true);
             try {
                 const response = await EmpregadoService.listar();
+                console.log(response.data);
                 setEmpregados(response.data);
             } catch (error) {
                 console.log(error)
