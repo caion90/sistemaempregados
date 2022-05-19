@@ -2,7 +2,7 @@
   "name": "empregados",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://3.17.73.170/",
+  "proxy": "http://168.227.56.72/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.2.0",
