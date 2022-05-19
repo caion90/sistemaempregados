@@ -1,6 +1,6 @@
 # Docker Compose file Reference (https://docs.docker.com/compose/compose-file/)
 
-version: '3.7'
+version: '3.3'
 
 # Define services
 services:
@@ -30,7 +30,7 @@ services:
       #    environment:
       #      REACT_APP_API_BASE_URL: ${IP}
       args:
-        REACT_APP_API_BASE_URL: localhost
+        REACT_APP_API_BASE_URL: http://3.17.73.170/api/v1/empregados
 
     ports:
       - "80:80" # Forward the exposed port 80 on the container to port 80 on the host machine

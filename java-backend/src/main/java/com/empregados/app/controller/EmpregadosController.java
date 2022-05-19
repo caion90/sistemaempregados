@@ -20,18 +20,18 @@ import com.empregados.app.service.EmpregadosService;
 
 @RestController
 @RequestMapping("/api/v1/")
-@CrossOrigin(origins = "*", allowedHeaders = "*")
+@CrossOrigin
 public class EmpregadosController {
 
 	@Autowired
 	EmpregadosService empregadosService;
-	
+
 	@PostMapping("/empregados")
 	private EmpregadoEntity salvarEmpregado(@RequestBody EmpregadoEntity empregado) {
 		empregadosService.salvar(empregado);
 		return empregado;
 	}
-		
+
 	@GetMapping("/empregados")
 	private List<EmpregadoEntity> listarEmpregados() {
 		return empregadosService.listar();
@@ -41,7 +41,7 @@ public class EmpregadosController {
 	private EmpregadoEntity GetEmpregadoByID(@PathVariable("id") Long id) {
 		return empregadosService.GetEmployeeByID(id);
 	}
-	
+
 	@PutMapping("/empregados/{id}")
 	private EmpregadoEntity UpdateEmpregadoByID(@PathVariable("id") Long id, @RequestBody EmpregadoEntity empregado) {
 		return empregadosService.UpdateEmpregadoByID(id, empregado);
@@ -50,6 +50,6 @@ public class EmpregadosController {
 	@DeleteMapping("/empregados/{id}")
 	private void DeleteEmpregadoByID(@PathVariable("id") Long id) {
 		empregadosService.DeleteEmpregadoByID(id);
-		return ;
+		return;
 	}
 }
